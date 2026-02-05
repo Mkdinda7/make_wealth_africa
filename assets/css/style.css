@@ -153,8 +153,10 @@ header {
     }
 
     .navbar-toggler {
+        display: inline-block !important;
         margin-left: 300px !important;
         margin: none !important;
+        border: 1px solid red !important;
     }
 }
 
@@ -2044,6 +2046,10 @@ footer {
         gap: 20px;
     }
 
+    .navbar-toggler {
+        font-size: 26px !important;
+    }
+
     .search-container {
         width: 100%;
         max-width: 500px;
@@ -2075,7 +2081,6 @@ footer {
 
 @media (max-width: 768px) {
     .nav-container {
-        flex-direction: column;
         gap: 15px;
         padding: 15px;
     }
