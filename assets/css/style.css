@@ -130,6 +130,34 @@ header {
     gap: 15px;
 }
 
+.navigation-logo {
+    display: none !important;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .header-container {
+        display: none;
+    }
+
+    .navigation-logo {
+        display: block !important;
+    }
+
+    .navbar-toggler {
+        margin-left: 300px !important;
+        margin: none !important;
+    }
+}
+
 .logo {
     font-size: 2.2rem;
     font-weight: 800;
@@ -258,7 +286,9 @@ header {
     box-shadow: 0 8px 20px rgba(255, 140, 0, 0.4);
 }
 
-/* Navigation */
+
+/*================ NAVBAR MAIN =================*/
+
 nav {
     background-color: white;
     border-top: 1px solid #f0f0f0;
@@ -270,32 +300,47 @@ nav {
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between !important;
-    padding: 0 30px;
+    align-items: center;
+    padding: 10px 20px;
 }
 
+/* LOGO */
+.navigation-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.navigation-logo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* HAMBURGER RIGHT SIDE */
 .navbar-toggler {
-    margin: auto !important;
+    border: none !important;
+    outline: none !important;
+    font-size: 24px;
 }
 
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+/* NAV LINKS */
 .main-nav {
     display: flex;
     list-style: none;
 }
 
-.main-nav li {
-    position: relative;
-}
-
 .main-nav a {
     display: block;
-    padding: 18px 22px;
+    padding: 15px 18px;
     color: var(--dark);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
-    transition: var(--transition);
-    position: relative;
+    transition: .3s;
 }
 
 .main-nav a:hover {
@@ -307,29 +352,11 @@ nav {
     color: var(--primary);
 }
 
-.main-nav a.active:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 20%;
-    right: 20%;
-    height: 3px;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    border-radius: 3px 3px 0 0;
-}
-
+/* DROPDOWN */
 .dropdown-menu {
     border-radius: 10px;
     border: none;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-}
-
-.dropdown-item {
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: all .3s;
-    font-weight: 500;
 }
 
 .dropdown-item:hover {
@@ -337,28 +364,66 @@ nav {
     color: white;
 }
 
-
-.country-flag {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 8px;
-    border: 2px solid #f0f0f0;
+/* COUNTRY SELECT */
+.country-select {
+    width: 160px;
 }
 
-.country-flag img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/*================ RESPONSIVE PART =================*/
+
+/* TABLET */
+@media (max-width: 991px) {
+
+    .navbar-collapse {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .main-nav {
+        flex-direction: column;
+    }
+
+    .main-nav a {
+        padding: 12px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .country-selector {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .country-select {
+        width: 100%;
+    }
 }
 
-.country-name {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--dark);
-    margin-right: 5px;
+/* MOBILE */
+@media (max-width: 576px) {
+
+    .navigation-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .navbar-toggler {
+        font-size: 22px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+    }
 }
+
+/* LARGE SCREEN FIX */
+@media (min-width: 1200px) {
+    .nav-container {
+        padding: 12px 40px;
+    }
+}
+
 
 /*============== PREMIUM HERO ==============*/
 
@@ -1787,7 +1852,7 @@ nav {
     padding: 0 40px;
 }
 
-.section-header{
+.section-header {
     display: flex !important;
     justify-content: space-between !important;
     margin-bottom: 20px !important;

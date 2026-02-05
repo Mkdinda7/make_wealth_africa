@@ -67,11 +67,18 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container nav-container">
 
-                <!-- Mobile Toggle -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <!-- LOGO (LEFT) -->
+                <div class="navigation-logo">
+                    <img src="./assets/img/logo.jfif" alt="logo">
+                </div>
+
+                <!-- HAMBURGER (RIGHT SIDE ALWAYS) -->
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false">
                     <i class="fas fa-bars"></i>
                 </button>
 
+                <!-- NAV ITEMS -->
                 <div class="collapse navbar-collapse" id="mainNav">
 
                     <ul class="navbar-nav main-nav">
@@ -82,14 +89,12 @@
                         </li>
 
                         <li class="nav-item dropdown">
-
                             <a class="nav-link dropdown-toggle" href="#" id="serviceDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                                data-bs-toggle="dropdown">
                                 <i class="fas fa-briefcase"></i> Services
                             </a>
 
                             <ul class="dropdown-menu">
-
                                 <li>
                                     <a class="dropdown-item" href="#"
                                         onclick="filterNews('Agriculture'); return false;">
@@ -120,11 +125,8 @@
                                         <i class="fas fa-hand-holding-usd me-2"></i> Investment
                                     </a>
                                 </li>
-
                             </ul>
-
                         </li>
-
 
                         <li class="nav-item">
                             <a class="nav-link" href="#" onclick="showInvestmentGuides(); return false;">
@@ -139,9 +141,8 @@
                         </li>
                     </ul>
 
-                    <!-- Country Selector -->
+                    <!-- COUNTRY SELECT -->
                     <div class="country-selector ms-auto">
-
                         <select class="form-select country-select" onchange="changeCountry(this)">
                             <option value="Ghana" selected>Ghana</option>
                             <option value="Nigeria">Nigeria</option>
@@ -149,13 +150,12 @@
                             <option value="South Africa">South Africa</option>
                             <option value="India">India</option>
                         </select>
-
                     </div>
-
 
                 </div>
             </div>
         </nav>
+
 
     </header>
 
@@ -492,7 +492,8 @@
     <footer>
         <div class="footer-container">
             <div class="footer-about">
-                <div class="footer-logo"> <img src="./assets/img/logo.jfif" alt="footer-logo" style="width: 150px; height: 150px; border-radius: 50%;"> </div>
+                <div class="footer-logo"> <img src="./assets/img/logo.jfif" alt="footer-logo"
+                        style="width: 150px; height: 150px; border-radius: 50%;"> </div>
                 <p>West Africa's premier investment intelligence platform, connecting investors with vetted
                     opportunities across 15+ countries. Daily updates, real-time data, and actionable insights.</p>
                 <div class="social-links">
